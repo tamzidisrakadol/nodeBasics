@@ -10,4 +10,5 @@ console.log(s1.getAge());
  pwd-> path 
  ls-> show all files in folder
  cd -> change directory
+ cd .. -> go backward
 */ 
