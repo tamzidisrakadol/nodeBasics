@@ -1,0 +1,19 @@
+{
+  "name": "lesson5",
+  "version": "1.0.0",
+  "description": "This is node js testing project random package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "nodejs",
+    "nodeman"
+  ],
+  "author": "Tamzid Israk Adol",
+  "license": "ISC",
+  "dependencies": {
+    "random-fruits-name": "^1.9.6"
+  }
+}
