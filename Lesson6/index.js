@@ -1,7 +1,8 @@
 const http = require('http')
 const fs = require('fs')
-const port = 3000
-const hostName ='127.0.0.1'
+//const port = 3000
+const port = process.env.port
+//const hostName ='127.0.0.1'
 
 
 
@@ -29,6 +30,9 @@ const server = http.createServer((req,res)=>{
    }
 })
 
-server.listen(port,hostName,()=>{
-  console.log(`Server is running at http://${hostName}:${port}`)
+server.listen(port,()=>{
+  console.log(`Server is running`)
 })
+
+
+//cannot user heroku for it is not free now 
