@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port  = 3001.
+const port  = 3001
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({extended:false}))
@@ -27,6 +27,22 @@ app.get("/server/billID/:billID/customerID/:cID",(req,res)=>{
     const cID = req.params.cID
     res.send(`<h1>Customer section bill id = ${billID} & customer id = ${cID}</h1>`)
 })
+
+
+//add regular expression for specifing the value of id or name 
+//[0-9]+ = we can only add numeric number 
+//[a-zA-Z]= we can add string
+app.get("/products/:id([0-9]+)",(req,res)=>{
+    res.send(`<h2> ID = ${req.params.id}</h2>`)
+})
+
+app.use("*",(req,res)=>{
+    res.status(404).send({
+        message:"not a Valid Route"
+    })
+})
+
+
 
 
 //http request with headers
